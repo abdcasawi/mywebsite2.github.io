@@ -1,0 +1,111 @@
+import { Channel, Program, Category } from '../types';
+
+export const categories: Category[] = [
+  { id: 'all', name: 'All Channels', icon: 'Tv', count: 24 },
+  { id: 'news', name: 'News', icon: 'Newspaper', count: 6 },
+  { id: 'sports', name: 'Sports', icon: 'Trophy', count: 5 },
+  { id: 'entertainment', name: 'Entertainment', icon: 'Star', count: 8 },
+  { id: 'movies', name: 'Movies', icon: 'Film', count: 5 },
+];
+
+export const channels: Channel[] = [
+  {
+    id: '1',
+    name: 'CNN International',
+    logo: 'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2',
+    category: 'news',
+    streamUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+    description: 'Breaking news and analysis from around the world',
+    language: 'English',
+    country: 'USA',
+    isHD: true,
+  },
+  {
+    id: '2',
+    name: 'ESPN Sports',
+    logo: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2',
+    category: 'sports',
+    streamUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4',
+    description: 'Live sports coverage and highlights',
+    language: 'English',
+    country: 'USA',
+    isHD: true,
+  },
+  {
+    id: '3',
+    name: 'Discovery Channel',
+    logo: 'https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2',
+    category: 'entertainment',
+    streamUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+    description: 'Nature documentaries and educational content',
+    language: 'English',
+    country: 'USA',
+    isHD: true,
+  },
+  {
+    id: '4',
+    name: 'HBO Max',
+    logo: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2',
+    category: 'movies',
+    streamUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4',
+    description: 'Premium movies and original series',
+    language: 'English',
+    country: 'USA',
+    isHD: true,
+  },
+  {
+    id: '5',
+    name: 'BBC World News',
+    logo: 'https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2',
+    category: 'news',
+    streamUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4',
+    description: 'Global news and current affairs',
+    language: 'English',
+    country: 'UK',
+    isHD: true,
+  },
+  {
+    id: '6',
+    name: 'Fox Sports',
+    logo: 'https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=2',
+    category: 'sports',
+    streamUrl: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4',
+    description: 'Live sports and analysis',
+    language: 'English',
+    country: 'USA',
+    isHD: true,
+  },
+];
+
+export const programs: Program[] = [
+  {
+    id: '1',
+    channelId: '1',
+    title: 'World News Now',
+    description: 'Latest international news and breaking stories',
+    startTime: new Date(Date.now() - 30 * 60 * 1000), // 30 minutes ago
+    endTime: new Date(Date.now() + 30 * 60 * 1000), // 30 minutes from now
+    genre: 'News',
+    rating: 'PG',
+  },
+  {
+    id: '2',
+    channelId: '2',
+    title: 'Monday Night Football',
+    description: 'Live NFL game coverage',
+    startTime: new Date(Date.now() - 15 * 60 * 1000),
+    endTime: new Date(Date.now() + 2 * 60 * 60 * 1000),
+    genre: 'Sports',
+    rating: 'PG',
+  },
+  {
+    id: '3',
+    channelId: '3',
+    title: 'Planet Earth III',
+    description: 'David Attenborough narrates this stunning nature documentary',
+    startTime: new Date(Date.now() - 10 * 60 * 1000),
+    endTime: new Date(Date.now() + 50 * 60 * 1000),
+    genre: 'Documentary',
+    rating: 'G',
+  },
+];
